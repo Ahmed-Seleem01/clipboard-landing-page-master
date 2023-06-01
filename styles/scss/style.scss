@@ -1,0 +1,20 @@
+// font family declaration
+@font-face {
+  font-family: "Bai Jamjuree";
+  src: url("../../assets/fonts/Bai_Jamjuree/BaiJamjuree-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Bai Jamjuree";
+  src: url("../../assets/fonts/Bai_Jamjuree/BaiJamjuree-SemiBold.ttf");
+  font-weight: 600;
+}
+// Set the root of the document styles
+:root{
+  font-size: 18px;
+}
+// Set the body styles
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1rem;
+}
