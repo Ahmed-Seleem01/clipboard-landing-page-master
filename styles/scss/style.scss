@@ -115,19 +115,32 @@ main.main-container{
   gap: 100px;
   h2{
     margin: 0;
+    font-size: 1.5rem;
   }
   p{
     margin-top: 0;
     margin-bottom: 70px;
   }
+
   .section-1{
     @extend .flex-container-col;
     border: 1px solid;
     gap: 25px;
   }       
-  section-1{
-    @extend .flex-container-col;
-    border: 1px solid;
-    gap: 25px;
-  }         
+  .section-2{
+    @extend .section-1;
+  }  
+  .section-3{
+    @extend .section-1;
+  }    
+  .section-4{
+    @extend .section-1;
+    gap: 65px;
+  }      
+  .section-5{
+    @extend .section-1;
+    p{
+      margin-bottom: 30px;
+    }
+  }       
 } 

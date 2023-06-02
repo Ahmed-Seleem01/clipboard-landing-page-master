@@ -31,13 +31,13 @@ p {
   line-height: 25px;
 }
 
-.flex-container-row, .btns, .flex-container-col, main.main-container section-1, main.main-container .section-1, main.main-container, .page-header {
+.flex-container-row, .btns, .flex-container-col, main.main-container .section-1, main.main-container .section-5, main.main-container .section-4, main.main-container .section-3, main.main-container .section-2, main.main-container, .page-header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flex-container-col, main.main-container section-1, main.main-container .section-1, main.main-container, .page-header {
+.flex-container-col, main.main-container .section-1, main.main-container .section-5, main.main-container .section-4, main.main-container .section-3, main.main-container .section-2, main.main-container, .page-header {
   flex-direction: column;
 }
 
@@ -108,18 +108,21 @@ main.main-container {
 }
 main.main-container h2 {
   margin: 0;
+  font-size: 1.5rem;
 }
 main.main-container p {
   margin-top: 0;
   margin-bottom: 70px;
 }
-main.main-container .section-1 {
+main.main-container .section-1, main.main-container .section-5, main.main-container .section-4, main.main-container .section-3, main.main-container .section-2 {
   border: 1px solid;
   gap: 25px;
 }
-main.main-container section-1 {
-  border: 1px solid;
-  gap: 25px;
+main.main-container .section-4 {
+  gap: 65px;
+}
+main.main-container .section-5 p {
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
