@@ -14,7 +14,6 @@
 
 *, *::before, ::after {
   box-sizing: border-box;
-  color: hsl(201, 11%, 66%);
 }
 
 img {
@@ -27,17 +26,14 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
-.flex-container-row, .btns {
+.flex-container-row, .btns, .flex-container-col, main.main-container .section-1, .page-header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flex-container-col, .page-header {
-  display: flex;
+.flex-container-col, main.main-container .section-1, .page-header {
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .btns {
@@ -59,8 +55,9 @@ h1, h2, h3 {
 
 body {
   font-family: "Bai Jamjuree", sans-serif;
-  font-size: 1rem;
   min-height: 100vh;
+  font-size: 0.91rem;
+  color: hsl(201, 11%, 66%);
 }
 
 .container {
@@ -97,8 +94,11 @@ body {
 .page-header p {
   margin-top: 0;
   margin-bottom: 50px;
-  font-size: 0.91rem;
   font-weight: 400;
+}
+
+main.main-container .section-1 {
+  border: 1px solid;
 }
 
 /*# sourceMappingURL=style.css.map */

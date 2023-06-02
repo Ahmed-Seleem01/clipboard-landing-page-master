@@ -21,7 +21,6 @@ $grayish-blue: hsl(201, 11%, 66%);
 // Define general elements
 *, *::before, ::after{
   box-sizing: border-box;
-  color: $grayish-blue;
 }
 img{
   max-width: 100%;
@@ -38,10 +37,8 @@ h1, h2, h3{
   align-items: center;
 }
 .flex-container-col{
-  display: flex;
+  @extend .flex-container-row;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 // Set the buttons style
 .btns{
@@ -66,8 +63,9 @@ h1, h2, h3{
 // Set the body styles
 body {
   font-family: "Bai Jamjuree", sans-serif;
-  font-size: 1rem;
   min-height: 100vh;
+  font-size: 0.91rem;
+  color: $grayish-blue;
 }
 // Set the container styles 
 .container{
@@ -104,7 +102,13 @@ body {
   p{
     margin-top: 0;
     margin-bottom: 50px;
-    font-size: 0.91rem;
     font-weight: 400;
   }
 }
+// Set the styles of the first section in main 
+main.main-container{
+  .section-1{
+    @extend .flex-container-col;
+    border: 1px solid;
+  }
+} 
