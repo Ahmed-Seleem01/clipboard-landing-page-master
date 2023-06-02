@@ -11,7 +11,7 @@
 }
 // Set the global variables
 $strong-cyan: hsl(171, 66%, 44%);
-$dark-grayish-blue: hsl(210, 10%, 33%);
+$light-blue: hsl(233, 100%, 69%);
 $dark-grayish-blue: hsl(210, 10%, 33%);
 $grayish-blue: hsl(201, 11%, 66%);
 // Set the root of the document styles
@@ -62,7 +62,7 @@ p{
   }
   button:nth-child(2){
     @extend button;
-    background-color: hsl(233, 100%, 69%);
+    background-color: $light-blue;
   }
 }
 // Set the body styles
@@ -78,6 +78,9 @@ body {
   grid-template-columns: 1fr;
   gap: 150px;
   text-align: center;
+}
+// Set general padding 
+.page-header, main.main-container{
   padding: 0 30px;
 }
 // Set the header styles
@@ -144,3 +147,17 @@ main.main-container{
     }
   }       
 } 
+// Set the footer styles
+footer{
+  padding: 50px;
+  @extend .flex-container-col;
+  gap: 50px;
+  background-color: hsl(220, 18%, 97%);
+  &>img{
+    width: 60px;
+  }
+  .social-icons{
+    @extend .flex-container-row;
+    gap: 40px;
+  }
+}

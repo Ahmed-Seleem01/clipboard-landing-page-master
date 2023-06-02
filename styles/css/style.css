@@ -31,13 +31,13 @@ p {
   line-height: 25px;
 }
 
-.flex-container-row, .btns, .flex-container-col, main.main-container .section-1, main.main-container .section-5, main.main-container .section-4, main.main-container .section-3, main.main-container .section-2, main.main-container, .page-header {
+.flex-container-row, footer .social-icons, .btns, .flex-container-col, footer, main.main-container .section-1, main.main-container .section-5, main.main-container .section-4, main.main-container .section-3, main.main-container .section-2, main.main-container, .page-header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flex-container-col, main.main-container .section-1, main.main-container .section-5, main.main-container .section-4, main.main-container .section-3, main.main-container .section-2, main.main-container, .page-header {
+.flex-container-col, footer, main.main-container .section-1, main.main-container .section-5, main.main-container .section-4, main.main-container .section-3, main.main-container .section-2, main.main-container, .page-header {
   flex-direction: column;
 }
 
@@ -72,6 +72,9 @@ body {
   grid-template-columns: 1fr;
   gap: 150px;
   text-align: center;
+}
+
+.page-header, main.main-container {
   padding: 0 30px;
 }
 
@@ -123,6 +126,18 @@ main.main-container .section-4 {
 }
 main.main-container .section-5 p {
   margin-bottom: 30px;
+}
+
+footer {
+  padding: 50px;
+  gap: 50px;
+  background-color: hsl(220, 18%, 97%);
+}
+footer > img {
+  width: 60px;
+}
+footer .social-icons {
+  gap: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
