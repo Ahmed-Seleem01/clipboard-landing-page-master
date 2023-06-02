@@ -9,12 +9,71 @@
   src: url("../../assets/fonts/Bai_Jamjuree/BaiJamjuree-SemiBold.ttf");
   font-weight: 600;
 }
+// Set the global variables
+$strong-cyan: hsl(171, 66%, 44%);
+$dark-grayish-blue: hsl(210, 10%, 33%);
+$dark-grayish-blue: hsl(210, 10%, 33%);
+$grayish-blue: hsl(201, 11%, 66%);
 // Set the root of the document styles
 :root{
   font-size: 18px;
+}
+// Define general elements
+*, *::before, ::after{
+  box-sizing: border-box;
+  color: $grayish-blue;
+}
+img{
+  max-width: 100%;
+  display: inline-block;
+}
+h1, h2, h3{
+  color: $dark-grayish-blue;
+  font-weight: 600;
+}
+// Define general classes
+.flex-container-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-container-col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+// Set the buttons style
+.btns{
+  @extend .flex-container-row;
+  flex-wrap: wrap;
+  gap: 25px;
+  button{
+    // max-width: 400px;
+    flex-grow: 1;
+    background-color: $strong-cyan;
+    color: hsl(0, 0%, 100%);
+    padding: 20px;
+    border: 0;
+    border-radius: 50px;
+    font-weight: 600;
+  }
+  button:nth-child(2){
+    @extend button;
+    background-color: hsl(233, 100%, 69%);
+  }
 }
 // Set the body styles
 body {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 1rem;
+  min-height: 100vh;
+}
+// Set the container styles 
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 150px;
+  text-align: center;
+  padding: 0 30px;
 }
