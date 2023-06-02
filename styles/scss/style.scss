@@ -29,6 +29,10 @@ img{
 h1, h2, h3{
   color: $dark-grayish-blue;
   font-weight: 600;
+  line-height: 35px;
+}
+p{
+  line-height: 25px;
 }
 // Define general classes
 .flex-container-row{
@@ -46,8 +50,9 @@ h1, h2, h3{
   flex-wrap: wrap;
   gap: 25px;
   button{
-    // max-width: 400px;
+    max-width: 400px;
     flex-grow: 1;
+    min-width: 300px;
     background-color: $strong-cyan;
     color: hsl(0, 0%, 100%);
     padding: 20px;
@@ -80,7 +85,6 @@ body {
   @extend .flex-container-col;
   padding-top: 120px;
   &::before{
-    border: 1px solid;
     content: "";
     display: inline-block;
     position: absolute;
@@ -107,8 +111,23 @@ body {
 }
 // Set the styles of the first section in main 
 main.main-container{
+  @extend .flex-container-col;
+  gap: 100px;
+  h2{
+    margin: 0;
+  }
+  p{
+    margin-top: 0;
+    margin-bottom: 70px;
+  }
   .section-1{
     @extend .flex-container-col;
     border: 1px solid;
-  }
+    gap: 25px;
+  }       
+  section-1{
+    @extend .flex-container-col;
+    border: 1px solid;
+    gap: 25px;
+  }         
 } 

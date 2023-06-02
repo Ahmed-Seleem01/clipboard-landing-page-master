@@ -24,15 +24,20 @@ img {
 h1, h2, h3 {
   color: hsl(210, 10%, 33%);
   font-weight: 600;
+  line-height: 35px;
 }
 
-.flex-container-row, .btns, .flex-container-col, main.main-container .section-1, .page-header {
+p {
+  line-height: 25px;
+}
+
+.flex-container-row, .btns, .flex-container-col, main.main-container section-1, main.main-container .section-1, main.main-container, .page-header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flex-container-col, main.main-container .section-1, .page-header {
+.flex-container-col, main.main-container section-1, main.main-container .section-1, main.main-container, .page-header {
   flex-direction: column;
 }
 
@@ -41,7 +46,9 @@ h1, h2, h3 {
   gap: 25px;
 }
 .btns button, .btns button:nth-child(2) {
+  max-width: 400px;
   flex-grow: 1;
+  min-width: 300px;
   background-color: hsl(171, 66%, 44%);
   color: hsl(0, 0%, 100%);
   padding: 20px;
@@ -72,7 +79,6 @@ body {
   padding-top: 120px;
 }
 .page-header::before {
-  border: 1px solid;
   content: "";
   display: inline-block;
   position: absolute;
@@ -97,8 +103,23 @@ body {
   font-weight: 400;
 }
 
+main.main-container {
+  gap: 100px;
+}
+main.main-container h2 {
+  margin: 0;
+}
+main.main-container p {
+  margin-top: 0;
+  margin-bottom: 70px;
+}
 main.main-container .section-1 {
   border: 1px solid;
+  gap: 25px;
+}
+main.main-container section-1 {
+  border: 1px solid;
+  gap: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */
