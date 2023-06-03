@@ -46,9 +46,7 @@ p {
   gap: 25px;
 }
 .btns button, .btns button:nth-child(2) {
-  max-width: 400px;
   flex-grow: 1;
-  min-width: 300px;
   background-color: hsl(171, 66%, 44%);
   color: hsl(0, 0%, 100%);
   padding: 20px;
@@ -76,6 +74,7 @@ body {
 
 .page-header, main.main-container {
   padding: 0 30px;
+  border: 1px solid;
 }
 
 .page-header {
@@ -138,6 +137,106 @@ footer > img {
 }
 footer .social-icons {
   gap: 40px;
+}
+
+@media (min-width: 376px) {
+  .btns button, .btns button:nth-child(2) {
+    flex-grow: 0;
+    max-width: 400px;
+    padding: 15px 40px;
+  }
+  .page-header::before {
+    background: url("../../images/bg-header-desktop.png") no-repeat hsl(0, 0%, 100%);
+  }
+}
+@media (min-width: 900px) {
+  .flex-container-rows, footer > div:not(.social-icons), main.main-container .section-3 > div > div, main.main-container .section-3 > div, main.main-container .section-1 > div:nth-child(2), main.main-container .section-2 > div:nth-child(2), main.main-container .section-3 > div:nth-child(2), main.main-container .section-4 > div:nth-child(2), main.main-container .section-5 > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div.container {
+    place-content: center;
+  }
+  div.container .page-header > div {
+    width: 650px;
+    padding: 40px;
+  }
+  main.main-container {
+    padding-right: 160px;
+    padding-left: 160px;
+  }
+  main.main-container .content-container {
+    width: 650px;
+  }
+  main.main-container .content-container p {
+    margin-top: 20px;
+  }
+  main.main-container .section-1 > img, main.main-container .section-2 > img, main.main-container .section-3 > img, main.main-container .section-4 > img, main.main-container .section-5 > img {
+    margin-left: -700px;
+    border: 1px solid;
+  }
+  main.main-container .section-1 > div:nth-child(2), main.main-container .section-2 > div:nth-child(2), main.main-container .section-3 > div:nth-child(2), main.main-container .section-4 > div:nth-child(2), main.main-container .section-5 > div:nth-child(2) {
+    gap: 100px;
+  }
+  main.main-container .section-1 > div:nth-child(2) > img, main.main-container .section-2 > div:nth-child(2) > img, main.main-container .section-3 > div:nth-child(2) > img, main.main-container .section-4 > div:nth-child(2) > img, main.main-container .section-5 > div:nth-child(2) > img {
+    margin-left: -250px;
+  }
+  main.main-container .section-1 > div:nth-child(2) > .info, main.main-container .section-2 > div:nth-child(2) > .info, main.main-container .section-3 > div:nth-child(2) > .info, main.main-container .section-4 > div:nth-child(2) > .info, main.main-container .section-5 > div:nth-child(2) > .info {
+    text-align: left;
+    padding: 40px;
+  }
+  main.main-container .section-2 img {
+    margin: 0;
+  }
+  main.main-container .section-3 > div {
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+  main.main-container .section-3 > div img {
+    border: 1px solid;
+  }
+  main.main-container .section-3 > div > div {
+    flex: 1;
+    font-size: 0.8rem;
+    flex-direction: column;
+  }
+  main.main-container .section-3 > div > div:not(:first-child) img {
+    margin-bottom: 8px;
+  }
+  main.main-container .section-4 {
+    flex-direction: row;
+  }
+  main.main-container .section-4 img {
+    margin: 0;
+  }
+  main.main-container .section-5 div + div.btns {
+    gap: 25px;
+  }
+  footer {
+    padding: 20px 160px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+    color: hsl(210, 10%, 33%);
+  }
+  footer > div:not(.social-icons) {
+    border: 1px solid;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    height: 100px;
+    width: 50%;
+    text-align: left;
+  }
+  footer > div:not(.social-icons) p {
+    border: 1px solid;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

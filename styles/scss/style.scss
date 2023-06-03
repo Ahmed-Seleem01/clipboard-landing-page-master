@@ -14,6 +14,8 @@ $strong-cyan: hsl(171, 66%, 44%);
 $light-blue: hsl(233, 100%, 69%);
 $dark-grayish-blue: hsl(210, 10%, 33%);
 $grayish-blue: hsl(201, 11%, 66%);
+
+$content-width: 650px;
 // Set the root of the document styles
 :root{
   font-size: 18px;
@@ -50,9 +52,7 @@ p{
   flex-wrap: wrap;
   gap: 25px;
   button{
-    max-width: 400px;
     flex-grow: 1;
-    min-width: 300px;
     background-color: $strong-cyan;
     color: hsl(0, 0%, 100%);
     padding: 20px;
@@ -82,6 +82,7 @@ body {
 // Set general padding 
 .page-header, main.main-container{
   padding: 0 30px;
+  border: 1px solid;
 }
 // Set the header styles
 .page-header{
@@ -159,5 +160,121 @@ footer{
   .social-icons{
     @extend .flex-container-row;
     gap: 40px;
+  }
+}
+// Set the media query breakpoint for large screens
+@media (min-width: 376px){
+  .btns{
+    button{
+      flex-grow: 0;
+      max-width: 400px;
+      padding: 15px 40px;
+    }
+  }
+  .page-header{
+    &::before{
+      background: url("../../images/bg-header-desktop.png") no-repeat hsl(0, 0%, 100%);
+    }
+  }
+}
+@media (min-width: 900px){
+  .flex-container-rows{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div.container{
+    place-content: center;
+    .page-header > div{
+      width: $content-width;
+      padding: 40px;
+    }
+  }
+  main.main-container{
+    padding-right: 160px;
+    padding-left: 160px;
+  }
+  main.main-container{
+    
+    .content-container{
+      width: $content-width;
+      p{
+        margin-top: 20px;
+      }
+    }
+    .section-1{
+     & > img{
+        margin-left: -700px;
+        border: 1px solid;;
+      }
+      & > div:nth-child(2){
+        @extend .flex-container-rows;
+        gap: 100px;
+        > img{
+          margin-left: -250px;
+        }
+        > .info{
+          text-align: left;
+          padding: 40px;
+        }
+      }
+    }
+    .section-2{
+      img{
+        margin: 0;
+      }
+    }
+    .section-3 > div{
+      @extend .flex-container-rows;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px;
+      img{
+        border: 1px solid;
+      }
+    }
+    .section-3 > div > div{
+      flex: 1;
+      font-size: 0.80rem;
+      @extend .flex-container-rows;
+      flex-direction: column;
+      &:not(:first-child) img{
+        margin-bottom: 8px;
+      }
+     }
+    .section-4{
+      flex-direction: row;
+      img{margin: 0;}
+    }
+    .section-5{
+      div + div.btns{
+        gap: 25px;
+      }
+    }
+  }
+  footer{
+    padding: 20px 160px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+    color: $dark-grayish-blue;
+    // flex-wrap: wrap;
+    & > div:not(.social-icons){
+      border: 1px solid;
+      @extend .flex-container-rows;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 40px;
+      height: 100px;
+      width: 50%;
+      text-align: left;
+      p{
+        border: 1px solid;
+        margin: 0;
+        padding: 0;
+      }
+    }
   }
 }
