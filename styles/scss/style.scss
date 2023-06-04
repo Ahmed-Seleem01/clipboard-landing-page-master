@@ -30,6 +30,13 @@ img {
   max-width: 100%;
   display: inline-block;
 }
+a{
+  text-decoration: none;
+  color: $dark-grayish-blue;
+  &:hover{
+    color: $strong-cyan;
+  }
+} 
 h1,
 h2,
 h3 {
@@ -63,10 +70,13 @@ p {
     border: 0;
     border-radius: 50px;
     font-weight: 600;
+    box-shadow: 0px 10px 10px hsla(171, 66%, 44%, 0.2);
+    cursor: pointer;
   }
   button:nth-child(2) {
     @extend button;
     background-color: $light-blue;
+    box-shadow: 0px 10px 10px hsla(233, 100%, 69%, 0.1);
   }
 }
 // Set the body styles
@@ -130,7 +140,7 @@ main.main-container {
     margin-top: 0;
     margin-bottom: 70px;
   }
-
+  
   .section-1 {
     @extend .flex-container-col;
     gap: 25px;
@@ -164,6 +174,9 @@ footer {
   .social-icons {
     @extend .flex-container-row;
     gap: 40px;
+    svg:hover path{
+      fill: $strong-cyan;
+    }
   }
 }
 // Set the media query breakpoint for large screens
